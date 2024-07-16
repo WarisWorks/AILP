@@ -5,6 +5,8 @@ import * as THREE from 'three';
 import { motion, AnimatePresence } from 'framer-motion';
 import Tilt from 'react-parallax-tilt';
 import { Zap, Share2, Cog } from 'lucide-react';
+import Image from 'next/image'
+
 
 const colors = {
   primary: '#E63946',
@@ -65,7 +67,7 @@ const AITool: React.FC<{ name: string; description: string; image: string; color
       >
         <div className="absolute w-full h-full backface-hidden rounded-xl overflow-hidden">
           <div className="absolute inset-0">
-            <img 
+            <Image 
               src={image} 
               alt={name} 
               className="w-full h-full object-cover"
